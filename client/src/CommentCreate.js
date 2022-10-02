@@ -5,9 +5,11 @@ const CommentCreate = ({ postId }) => {
     const [comment, setComment] = useState('')
 
     const onSubmit = async (e) => {
+        console.log('ge')
+
         e.preventDefault();
 
-        await axios.post(`http://localhost:4001/posts/${postId}/comments`, {content: comment})
+        await axios.post(`http://posts.com/posts/${postId}/comments`, {content: comment})
 
         setComment('')
     }
